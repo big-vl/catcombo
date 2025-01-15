@@ -33,24 +33,24 @@
 
 1. **Клонируйте репозиторий и перейдите в его директорию:**
 
-    ```bash
-    git clone https://github.com/big-vl/catcombo.git
-    cd catcombo
-    ```
+```bash
+git clone https://github.com/big-vl/catcombo.git
+cd catcombo
+```
 
 2. **Создайте виртуальное окружение и установите зависимости:**
 
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate   # На Windows: venv\Scripts\activate
-    pip install -r requirements.txt
-    ```
+```bash
+python3 -m venv venv
+source venv/bin/activate   # На Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
 3. **Запустите тестовую печать**
 
-    ```bash
-    python main.py --file media/test1.png --black_level 5 --name "LX-D02"
-    ```
+```bash
+python main.py --file media/test1.png --black_level 5 --name "LX-D02"
+```
 
 ### Развернутая инструкция
 Аргументы командной строки
