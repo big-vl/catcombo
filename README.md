@@ -34,8 +34,8 @@
 1. **Клонируйте репозиторий и перейдите в его директорию:**
 
     ```bash
-    git clone https://github.com/yourusername/python-ble-ipp-printer-server.git
-    cd python-ble-ipp-printer-server
+    git clone https://github.com/big-vl/catcombo.git
+    cd catcombo
     ```
 
 2. **Создайте виртуальное окружение и установите зависимости:**
