@@ -1,0 +1,46 @@
+*PPD-Adobe: "4.3"
+*% PPD File for Thermal Printer (57 mm, 203 DPI)
+*% Generated for demonstration purposes
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*Manufacturer: "Shenzhen Xiqi Technology Co., Ltd."
+*ModelName: "Thermal Printer LX-D2 203 DPI"
+*Product: "(Thermal Printer LX-D2 203 DPI)"
+*NickName: "Thermal Printer LX-D2 57mm 203 DPI"
+*ShortNickName: "Thermal57mm203DPI"
+
+*PCFileName: "LX-D2-thermal_57mm_203dpi.ppd"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "5"
+*LandscapeOrientation: Plus90
+
+
+*% Custom Paper Size (57 mm width, 47.7 mm printable area)
+*PageSize Label58x40mm/58mm x 40mm Label WB/Ozon: "<</PageSize [465 320]>>setpagedevice"
+*DefaultPageSize: Label58x40mm
+
+*ImageableArea Label58x40mm: "0 0 465 320"
+*PaperDimension Label58x40mm: "465 320"
+
+
+*% Fixed Resolution
+*DefaultResolution: 203dpi
+*Resolution 203dpi: "<</HWResolution [203 203]>>setpagedevice"
+
+*% Input Slots
+*DefaultInputSlot: Roll
+*InputSlot Roll/Roll Feed: "<</MediaPosition 1>>setpagedevice>"
+
+*% Media Types
+*DefaultMediaType: Plain
+*MediaType Plain/Plain Paper: ""
+
+*% Duplex Option (None)
+*DefaultDuplex: None
+*Duplex None/Off: "<</Duplex false>>setpagedevice>"
+
+*% End of PPD file

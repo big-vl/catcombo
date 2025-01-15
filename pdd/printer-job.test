@@ -1,0 +1,9 @@
+{
+  OPERATION Print-Job
+  VERSION 2.0
+  GROUP operation-attributes-tag
+  ATTR charset attributes-charset utf-8
+  ATTR naturalLanguage attributes-natural-language en
+  ATTR uri printer-uri "ipp://localhost:8095/"
+  FILE document.pdf
+}
