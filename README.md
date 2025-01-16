@@ -96,12 +96,16 @@ IPP (Internet Printing Protocol) сервер, реализованный с и�
 
 ### Зависимости
 
-- Python 3.6 и выше
+- Python 3.10 и выше
 - Стандартные библиотеки: `io`, `struct`, `logging`, `socketserver`, `http.server`
 - Дополнительные зависимости:
   - bleak для соеденения по Bluetooth
   - wand для обработки изображения
   - Pillow для обработки изображения
+
+- Для Windows:
+  - [Установить Ghostscript AGPL Release](https://ghostscript.com/releases/gsdnld.html)
+  - [Установить ImageMagick](https://imagemagick.org/script/download.php#windows)
 
 ### Установка
 
