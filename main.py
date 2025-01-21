@@ -122,6 +122,8 @@ class BLEPrinter:
                 charging_status_byte = data_hex[8:10]  # Извлекаем пятый байт (2 символа, начиная с индекса 8)
                 if charging_status_byte == "01":
                     print("Идет заряд батареи...")
+                if charging_status_byte == "02":
+                    print("Батарея заряжена!")
 
             if battery_percentage is not None:
                 print(f"Уровень заряда батареи: {battery_percentage}%")
