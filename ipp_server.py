@@ -490,6 +490,11 @@ class IPPPrinterMethod:
             # Считаем общее количество пикселей
             total_pixels = sum(histogram)
 
+            # Проверяем, есть ли пиксели вообще
+            if total_pixels == 0:
+                print("Гистограмма пустая: невозможно определить тип изображения.")
+                return False  # Считаем, что это не документ
+
             # Считаем тёмные и светлые пиксели
             dark_pixels = sum(
                 histogram[:dark_threshold]
