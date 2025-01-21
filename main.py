@@ -100,6 +100,22 @@ class BLEPrinter:
         print(f"Получено уведомление от {sender}: {data_hex}")
         self.latest_notification = data_hex
 
+        # Проверяем уровень заряда батареи
+        if data_hex.startswith("5a02") and len(data_hex) >= 6:  # Убедимся, что длина данных достаточна
+            battery_byte = data_hex[4:6]  # Извлекаем третий байт (2 символа, начиная с индекса 4)
+            battery_level = int(battery_byte, 16)  # Преобразуем из hex в десятичное значение
+
+            # Определяем уровень заряда в процентах
+            if 0x00 <= battery_level <= 0x64:  # Диапазон значений для уровня заряда
+                battery_percentage = (battery_level * 100) // 0x64
+            else:
+                battery_percentage = None  # Неопределенный диапазон
+
+            if battery_percentage is not None:
+                print(f"Уровень заряда батареи: {battery_percentage}%")
+            else:
+                print(f"Неизвестный уровень заряда батареи: {battery_byte}")
+
         if data_hex.startswith("5a0714"):
             print("Принтер требует паузы.")
             self.pause_required.set()
