@@ -111,6 +111,12 @@ class BLEPrinter:
             else:
                 battery_percentage = None  # Неопределенный диапазон
 
+            # Проверяем состояние зарядки
+            if len(data_hex) >= 10:  # Убедимся, что длина данных достаточна
+                charging_status_byte = data_hex[8:10]  # Извлекаем пятый байт (2 символа, начиная с индекса 8)
+                if charging_status_byte == "01":
+                    print("Идет заряд батареи...")
+
             if battery_percentage is not None:
                 print(f"Уровень заряда батареи: {battery_percentage}%")
             else:
