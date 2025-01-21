@@ -6,7 +6,7 @@ from PIL import Image
 
 
 class BLEPrinter:
-    def __init__(self, target_name="LX-D02", black_level=5):
+    def __init__(self, target_name="LX-D02", black_level=9):
         self.target_name = target_name
         self.address = None
         self.char_uuid = "0000ffe1-0000-1000-8000-00805f9b34fb"
@@ -49,11 +49,11 @@ class BLEPrinter:
         Устанавливает уровень черного для принтера.
 
         !!! Высокий уровень термпопринтера приводит к ошибке
-        :param level: Значение от 0 до 7, где 0 - минимальный уровень, 7 - максимальный уровень.
+        :param level: Значение от 0 до 7, где 0 - минимальный уровень, 9 - максимальный уровень.
         :return: Команда в формате HEX.
         """
-        if not (0 <= level <= 7):
-            raise ValueError("Уровень должен быть в диапазоне от 0 до 7.")
+        if not (0 <= level <= 9):
+            raise ValueError("Уровень должен быть в диапазоне от 0 до 9.")
         return f"5a0c{level:02x}"
 
     async def connect(self, address):
@@ -123,8 +123,8 @@ class BLEPrinter:
             try:
                 # Проверяем, нужно ли сделать паузу
                 if self.pause_required.is_set():
-                    print("Пауза на 50 мс...")
-                    await asyncio.sleep(0.07)  # Пауза 59 мс
+                    print("Пауза на 59 мс...")
+                    await asyncio.sleep(0.59)  # Пауза 59 мс
                     self.pause_required.clear()  # Сбрасываем флаг паузы
 
                 if idx == 0:
